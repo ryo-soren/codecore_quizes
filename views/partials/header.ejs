@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cluckr</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+    <script src="/stylesheets/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-light text-secondary">
+            <a class="navbar-brand text-secondary mx-4" href="/clucks">
+                <img class="w-25" src="https://www.pngkey.com/png/detail/11-114012_download-chicken-emoji-image-in-png-chicken-emoji.png" alt="cluckr logo">
+            </a>
+          
+            <div class="mt-4" id="navbarSupportedContent">
+              <ul class="list-inline center mx-4">
+                <li class="list-inline-item">
+                    <a href="/clucks/new" class="px-4 btn btn-secondary">Cluck!</a>                
+                </li>           
+                <li class="list-inline-item">
+                    <% if (username) { %>
+                        <p>Hello <%-username%> </p>
+                    <% } %>
+                </li>
+                <li class="list-inline-item">
+                    <% if (username) { %>
+                        <form action="/sign_out" method="POST">
+                            <button type="submit" class='btn btn-secondary'>Sign Out</button>
+                        </form>
+                    <% } else { %>
+                        <a href="/clucks/sign_in" class="btn btn-secondary">Sign-in</a>
+                    <% } %>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <hr>
+
+
+              
